@@ -8,19 +8,15 @@ export default ({ data }) =>
 
 <div>
   <g.H1 display={"inline-block"} borderBottom={"1px solid"}>
-    Amazing Pandas Eating Things
   </g.H1>
   <h4>
     {data.allMarkdownRemark.totalCount} Posts
   </h4>
   {data.allMarkdownRemark.edges.map(({ node }) =>
     <div>
-
-    <Link
-  to={node.fields.slug}
-  css={{ textDecoration: `none`, color: `inherit` }}
->
-
+    <Link to={node.fields.slug}
+      css={{ textDecoration: `none`, color: `inherit` }}
+    >
       <g.H3 marginBottom={rhythm(1 / 4)}>
         {node.frontmatter.title}{" "}
         <g.Span color="#BBB">— {node.frontmatter.date}</g.Span>
@@ -94,9 +90,13 @@ export default ({ data }) =>
       totalCount
       edges {
         node {
+          id
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+          }
+          fields {
+          slug
           }
           excerpt
         }

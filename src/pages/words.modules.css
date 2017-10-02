@@ -1,0 +1,9 @@
+.smallLink{
+  font-size: 0.6rem;
+  font-family: BPmono;
+}
+
+@font-face {
+    font-family: BPmono;
+    src: url("./BPmono-webfont.ttf");
+}

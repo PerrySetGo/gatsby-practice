@@ -1,6 +1,7 @@
 module.exports = {
   siteMetadata: {
-  title: `New Real Title`,
+  title: `perrysetgo`,
+  flexcss: `https://cdnjs.cloudflare.com/ajax/libs/gridlex/2.4.1/gridlex.min.css`
 },
   plugins: [
     {
@@ -10,13 +11,22 @@ module.exports = {
         path: `${__dirname}/src/`,
       }
     },
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-glamor`,
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Roboto`, `Cairo`]
+      }
+    },
     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `src/utils/typography.js`,
       },
-    },
+          },
+      `gatsby-transformer-remark`,
+      `gatsby-plugin-glamor`,
+      `gatsby-plugin-react-helmet`,
+      `gatsby-plugin-twitter`,
+
   ],
 }

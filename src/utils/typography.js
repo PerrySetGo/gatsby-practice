@@ -1,10 +1,7 @@
 import Typography from "typography"
-//import bootstrapTheme from "typography-theme-bootstrap"
-//import lawtonTheme from "typography-theme-lawton"
-//import fairyGateTheme from 'typography-theme-fairy-gates'
-import kirkhamTheme from "typography-theme-kirkham"
+import theme from "typography-theme-twin-peaks"
 
-const typography = new Typography(kirkhamTheme)
+const typography = new Typography(theme)
 
 //export default typography
 module.exports = typography
